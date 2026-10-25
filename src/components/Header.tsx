@@ -32,7 +32,7 @@ export const Header: React.FC<HeaderProps> = ({
               role="img"
               aria-labelledby="te-logo-title"
             >
-              <title id="te-logo-title">Teghia Enterprise TE Monogram</title>
+              <title id="te-logo-title">Teghia Enterprise</title>
 
               <defs>
                 {/* Metallic gold finish */}
