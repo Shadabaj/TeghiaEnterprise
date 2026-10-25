@@ -6,3 +6,9 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Generated AI Studio media cache; source assets live under src/assets/images
+.aistudio/artifacts/
+
+# npm install creates the dependency lockfile during CI; dependencies stay untracked
+node_modules/

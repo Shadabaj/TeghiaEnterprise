@@ -80,7 +80,7 @@ export const CONTRACTOR_INFO = {
     name: 'Jalaluddin Ansari',
     role: 'Founder & Senior Civil Contractor',
     experience: '40+ Years Craftsmanship',
-    avatar: '/src/assets/images/contractor_founder_portrait_1792912327536.jpg',
+    avatar: './src/assets/images/contractor_founder_portrait_1792912327536.jpg',
   },
 };
 
@@ -118,7 +118,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Interior Renovation & Modular Fit-outs',
     category: 'Modular & Interiors',
     iconName: 'home',
-    image: '/src/assets/images/modular_kitchen_fitout_1792912270534.jpg',
+    image: './src/assets/images/modular_kitchen_fitout_1792912270534.jpg',
     description:
       'Bespoke modular kitchens (IS 710 BWR ply), veneer/PU wall paneling, built-in wardrobes, space-optimized layouts, and turnkey home styling.',
     tags: ['Hafele / Hettich', 'BWP Grade Ply', '45-Day Handover'],
@@ -141,7 +141,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Waterproofing & Leakage Treatment',
     category: 'Waterproofing',
     iconName: 'droplet',
-    image: '/src/assets/images/waterproofing_leakage_audit_1792912271288.jpg',
+    image: './src/assets/images/waterproofing_leakage_audit_1792912271288.jpg',
     description:
       'Comprehensive moisture meter scanning, terrace crystalline grouting, external wall crack sealing, and bathroom slab membrane treatments with certified performance guarantees.',
     tags: ['Dr. Fixit / Fosroc', 'Infrared Moisture Mapping', 'Up to 7-Yr Warranty'],
@@ -164,7 +164,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Civil Construction & Structural Repairs',
     category: 'Civil & Masonry',
     iconName: 'wrench',
-    image: '/src/assets/images/civil_structural_repairs_1792912295291.jpg',
+    image: './src/assets/images/civil_structural_repairs_1792912295291.jpg',
     description:
       'RCC column retrofitting, internal wall alterations, plaster rebonding, vitrified tile / Italian marble flooring, and foundation damp-proofing for villas and high-rises.',
     tags: ['Structural Audit Ready', 'Ultratech 53-Grade', 'Laser Leveling'],
@@ -187,7 +187,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Interior & Exterior Painting',
     category: 'Painting',
     iconName: 'brush',
-    image: '/src/assets/images/interior_exterior_painting_1792912295640.jpg',
+    image: './src/assets/images/interior_exterior_painting_1792912295640.jpg',
     description:
       'Mechanized dustless sanding, acrylic primer coats, anti-fungal exterior weather-shields, and luxury interior finishes (Royal Touch / PU wood coatings).',
     tags: ['Asian Paints Royale', 'Berger WeatherCoat', 'Zero VOC Options'],
@@ -210,7 +210,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Gypsum & POP Architectural Ceilings',
     category: 'Ceilings & Lighting',
     iconName: 'layers',
-    image: '/src/assets/images/gypsum_ceiling_installation_1792912271007.jpg',
+    image: './src/assets/images/gypsum_ceiling_installation_1792912271007.jpg',
     description:
       'Heavy-gauge GI channel suspension, Saint-Gobain Gyproc boards, zero-sag joints, and integrated profile lighting channels for a seamless modern aesthetic.',
     tags: ['Gyproc Elite Boards', 'Acoustic Buffering', 'Profile Coves'],
@@ -233,7 +233,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'MS & SS Fabrication & Balcony Grills',
     category: 'Fabrication',
     iconName: 'grid',
-    image: '/src/assets/images/balcony_fabrication_grills_1792912295972.jpg',
+    image: './src/assets/images/balcony_fabrication_grills_1792912295972.jpg',
     description:
       'Heavy-duty safety grills, SS 304 balcony railings with toughened glass, polycarbonate terrace sheds, and motorized security gates fabricated to precise dimensions.',
     tags: ['SS 304 / Jindal Pipe', 'Powder Coated', 'Anti-Rust Epoxy Primer'],
@@ -340,7 +340,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: '3BHK Complete Turnkey Renovation',
     description:
       'Full interior remodel comprising wall demolition for open kitchen layout, waterproofed wet areas, custom PU-finished wardrobes, and bespoke ambient ceiling coves.',
-    image: '/src/assets/images/hero_penthouse_kharghar_1792912269017.jpg',
+    image: './src/assets/images/hero_penthouse_kharghar_1792912269017.jpg',
     metric1Label: 'Turnaround',
     metric1Value: '52 Days (On Time)',
     metric2Label: 'Area Handled',
@@ -375,7 +375,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'Terrace Waterproofing & Crack Grouting',
     description:
       'Permanent remediation of stubborn monsoon seepage affecting 4 top-floor flats. High-pressure polyurethane injection and 3-coat elastomeric membrane barrier.',
-    image: '/src/assets/images/terrace_waterproofing_case_1792912295859.jpg',
+    image: './src/assets/images/terrace_waterproofing_case_1792912295859.jpg',
     metric1Label: 'Warranty Issued',
     metric1Value: '7-Year Written',
     metric2Label: 'Seepage Status',
@@ -409,7 +409,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'Commercial Office Ceilings & ACP Facade',
     description:
       'Complete fit-out for 2,200 sq.ft. consultancy office including acoustic grid ceilings, fire-rated partitions, executive conference paneling, and external ACP cladding.',
-    image: '/src/assets/images/commercial_office_fitout_1792912327332.jpg',
+    image: './src/assets/images/commercial_office_fitout_1792912327332.jpg',
     metric1Label: 'Scope',
     metric1Value: 'Commercial Turnkey',
     metric2Label: 'Client Rating',
