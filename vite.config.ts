@@ -5,6 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // GitHub Pages serves project sites under /<repository-name>/.
+    base: process.env.GITHUB_ACTIONS === 'true' ? '/TeghiaEnterprise/' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
