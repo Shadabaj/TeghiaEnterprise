@@ -67,8 +67,8 @@ export interface Neighborhood {
 
 export const CONTRACTOR_INFO = {
   name: 'Teghia Enterprise',
-  legalName: 'Building Solutions & Interior Renovation',
-  tagline: 'Deliver Quality Service On Time Within Budget',
+  legalName: 'Interior, Civil Construction & Renovation Services',
+  tagline: 'Complete Interior & Civil Solutions Across Maharashtra',
   phone: '+91 9920734040',
   phoneClean: '9920734040',
   whatsapp: '+91 9920734040',
@@ -89,7 +89,7 @@ export const TRUST_METRICS = [
     icon: 'star',
     value: '4.8 / 5.0',
     title: '4.8 / 5.0',
-    description: 'Verified Google Rating across 180+ Navi Mumbai homeowners',
+    description: 'Interior and civil service coverage across six regions in Maharashtra',
   },
   {
     icon: 'receipt',
@@ -110,6 +110,76 @@ export const TRUST_METRICS = [
     description: 'Dedicated civil engineer supervisor for daily quality audits',
   },
 ];
+
+/**
+ * Options for the Scope Required enquiry/quotation dropdown.
+ * The original six option labels are retained for backward compatibility.
+ * The detailed options let customers select a specific interior/civil service.
+ */
+export const SERVICE_SCOPE_OPTIONS = [
+  // Original options — retained so existing form submissions remain compatible.
+  'Full Turnkey Renovation',
+  'Waterproofing & Leakage Audit',
+  'Civil Repairs & Flooring',
+  'False Ceiling & Painting',
+  'Modular Kitchen & Wardrobes',
+  'Balcony Grills & Fabrication',
+
+  // Interior design and renovation.
+  'Interior Design & Space Planning',
+  'Complete Home Interiors',
+  'Home Interior Renovation',
+  'Turnkey Interior and Civil Work',
+  'Modular Kitchen Design & Installation',
+  'Wardrobes & Custom Storage',
+  'Custom Furniture, TV Units, Beds & Cabinets',
+  'Decorative Wall Panelling',
+
+  // Civil construction and repairs.
+  'Brickwork, Blockwork & Masonry',
+  'Internal & External Plastering',
+  'Civil Construction & Structural Repairs',
+  'Wall Crack Repairs & Replastering',
+  'General Civil Maintenance & Property Repairs',
+  'Demolition, Dismantling & Site Preparation',
+  'Debris Removal Coordination',
+
+  // Flooring, tiling and stonework.
+  'Flooring Installation & Replacement',
+  'Ceramic, Vitrified & Porcelain Tile Work',
+  'Marble, Granite & Natural Stonework',
+
+  // Waterproofing and painting.
+  'Terrace, Bathroom & Balcony Waterproofing',
+  'Leakage, Seepage & Damp-Proofing Treatment',
+  'Interior Painting & Surface Finishing',
+  'Exterior Painting & Weatherproof Coating',
+
+  // Ceiling, electrical and plumbing work.
+  'Gypsum False Ceiling & POP Work',
+  'Ceiling Lighting & Profile-Light Coordination',
+  'Electrical Wiring, Switches, Fixtures & Lighting',
+  'Plumbing, Water Supply & Drainage',
+  'Sanitaryware, WC, Basin, Tap & Shower Installation',
+  'MEP Coordination (Mechanical, Electrical & Plumbing)',
+
+  // Bathroom-only option is deliberately separate from kitchen work.
+  'Bathroom Renovation (Bathroom Only)',
+  'Kitchen Renovation',
+
+  // Doors, glass, metalwork and exterior works.
+  'Doors, Windows & Aluminium Frames',
+  'Glass Partitions, Mirrors & Glazing',
+  'Balcony Safety Grills & Railings',
+  'Custom MS/SS Metal Fabrication',
+  'External Facade Repairs & Finishing',
+  'ACP Cladding',
+  'Roofing, Terrace Coverings & Protective Sheds',
+
+  // Residential and commercial projects.
+  'Commercial Office Fit-Outs',
+  'Shop, Clinic & Showroom Fit-Outs',
+] as const;
 
 export const SERVICES: ServiceItem[] = [
   {
@@ -248,6 +318,338 @@ export const SERVICES: ServiceItem[] = [
       avgTimeline: '10 - 14 Calendar Days',
       processSummary:
         'Precision digital site dimension measurement, factory MIG/TIG welding, chemical anti-rust passivation bath, electrostatic powder coating, and heavy anchor bolt mounting.',
+    },
+  },
+  {
+    id: 'turnkey-interior-renovation',
+    badge: 'END-TO-END INTERIORS',
+    title: 'Complete Home Interior Design & Renovation',
+    category: 'Modular & Interiors',
+    iconName: 'home',
+    image: './src/assets/images/modular_kitchen_fitout_1792912270534.jpg',
+    description:
+      'End-to-end interior execution for apartments, villas, and homes, including space planning, living and bedroom interiors, storage, finishes, fixtures, and final handover.',
+    tags: ['Turnkey Execution', 'Space Planning', 'Residential & Villa Projects'],
+    specs: {
+      materials: [
+        'Client-approved plywood, laminates, veneers, and hardware',
+        'Interior-grade paints and surface finishes',
+        'Lighting, switches, and decorative fixtures',
+        'Flooring and ceiling materials as per approved BOQ',
+      ],
+      warranty: 'Warranty as specified in the approved work order',
+      avgTimeline: 'Project-specific; confirmed after site inspection',
+      processSummary:
+        'Requirement discussion, measurements, layout and material approvals, itemized BOQ, phased execution, quality checks, and handover.',
+    },
+  },
+  {
+    id: 'custom-carpentry-furniture',
+    badge: 'CUSTOM MADE',
+    title: 'Custom Carpentry, Furniture & Storage',
+    category: 'Carpentry & Furniture',
+    iconName: 'home',
+    image: './src/assets/images/modular_kitchen_fitout_1792912270534.jpg',
+    description:
+      'Custom wardrobes, beds, TV units, study desks, shoe racks, storage cabinets, wall paneling, doors, and made-to-measure furniture for homes and workplaces.',
+    tags: ['Custom Measurements', 'Multiple Finishes', 'Hardware Options'],
+    specs: {
+      materials: [
+        'Plywood, MDF, HDHMR, and solid wood options as suitable for the job',
+        'Laminate, veneer, acrylic, and PU finish options',
+        'Hinges, channels, handles, and soft-close hardware',
+      ],
+      warranty: 'As specified in the approved work order',
+      avgTimeline: 'Confirmed after design and measurement approval',
+      processSummary:
+        'Site measurements, drawings and finish selection, material confirmation, fabrication, installation, and final alignment checks.',
+    },
+  },
+  {
+    id: 'flooring-tiling-stone',
+    badge: 'FLOOR & WALL FINISHES',
+    title: 'Flooring, Tiling, Marble & Stone Work',
+    category: 'Civil & Flooring',
+    iconName: 'grid',
+    image: './src/assets/images/civil_structural_repairs_1792912295291.jpg',
+    description:
+      'Floor and wall tile installation, vitrified tiles, ceramic tiles, marble, granite, natural stone, skirting, grouting, tile replacement, and floor-level correction.',
+    tags: ['Tile Installation', 'Marble & Granite', 'Repair & Replacement'],
+    specs: {
+      materials: [
+        'Client-selected ceramic and vitrified tiles',
+        'Marble, granite, and other suitable stone',
+        'Tile adhesive, grout, spacers, and leveling accessories',
+      ],
+      warranty: 'Workmanship terms as specified in the approved work order',
+      avgTimeline: 'Confirmed after area measurement and substrate inspection',
+      processSummary:
+        'Surface inspection, level checks, quantity take-off, substrate preparation, installation, grouting, and finishing inspection.',
+    },
+  },
+  {
+    id: 'electrical-lighting',
+    badge: 'ELECTRICAL WORKS',
+    title: 'Electrical Wiring, Fixtures & Lighting',
+    category: 'Electrical & Lighting',
+    iconName: 'layers',
+    image: './src/assets/images/gypsum_ceiling_installation_1792912271007.jpg',
+    description:
+      'Electrical point additions and relocation, concealed wiring, switchboards, distribution boards, lighting installation, fans, exhausts, and interior lighting coordination.',
+    tags: ['Wiring & Switches', 'Lighting Fixtures', 'Safety Checks'],
+    specs: {
+      materials: [
+        'Wires and cables selected to suit the circuit load',
+        'Switches, sockets, and protective devices',
+        'LED fixtures, fans, and approved accessories',
+      ],
+      warranty: 'Equipment warranties follow the respective manufacturer terms; workmanship terms in the work order',
+      avgTimeline: 'Confirmed after point schedule and site inspection',
+      processSummary:
+        'Point planning, load and site checks, routing, installation, circuit testing, and coordination with ceiling and carpentry work.',
+    },
+  },
+  {
+    id: 'plumbing-sanitary',
+    badge: 'PLUMBING SOLUTIONS',
+    title: 'Plumbing, Sanitaryware & Drainage',
+    category: 'Plumbing & Sanitary',
+    iconName: 'droplet',
+    image: './src/assets/images/waterproofing_leakage_audit_1792912271288.jpg',
+    description:
+      'Water supply and drainage lines, concealed plumbing, leak repairs, bathroom fittings, kitchen sinks, sanitaryware, taps, health faucets, and plumbing fixture replacement.',
+    tags: ['Leak Detection', 'Pipework & Fittings', 'Bathroom Fixtures'],
+    specs: {
+      materials: [
+        'Suitable CPVC, UPVC, PVC, or other approved pipe systems',
+        'Valves, traps, connectors, and plumbing fittings',
+        'Client-selected sanitaryware and faucets',
+      ],
+      warranty: 'As specified in the approved work order and applicable product warranties',
+      avgTimeline: 'Confirmed after plumbing inspection and scope approval',
+      processSummary:
+        'Inspection, isolation where required, pipe and fixture work, leakage and flow checks, sealing, and cleanup.',
+    },
+  },
+  {
+    id: 'bathroom-kitchen-remodel',
+    badge: 'WET-AREA RENOVATION',
+    title: 'Bathroom & Kitchen Civil Renovation',
+    category: 'Bathroom & Kitchen',
+    iconName: 'droplet',
+    image: './src/assets/images/waterproofing_leakage_audit_1792912271288.jpg',
+    description:
+      'Bathroom and kitchen remodeling, removal and replacement of tiles, waterproofing, plumbing updates, counter and sink installation, sanitary fittings, and finishing work.',
+    tags: ['Tile Replacement', 'Waterproofing Coordination', 'Fixture Installation'],
+    specs: {
+      materials: [
+        'Waterproofing products suited to the site condition',
+        'Client-selected wall and floor tiles',
+        'Approved plumbing fittings, adhesives, and grout',
+      ],
+      warranty: 'Separate product and workmanship terms stated in the approved work order',
+      avgTimeline: 'Confirmed after site inspection and scope freeze',
+      processSummary:
+        'Existing-condition survey, demolition plan, plumbing coordination, substrate repairs, waterproofing and testing where applicable, tiling, fixture installation, and handover.',
+    },
+  },
+  {
+    id: 'bathroom-renovation-only',
+    badge: 'BATHROOM-ONLY RENOVATION',
+    title: 'Complete Bathroom Renovation',
+    category: 'Bathroom Renovation',
+    iconName: 'droplet',
+    image: './src/assets/images/waterproofing_leakage_audit_1792912271288.jpg',
+    description:
+      'Dedicated bathroom renovation service only, including removal of old tiles and fittings, floor and wall tiling, waterproofing, plumbing adjustments, sanitaryware, shower fittings, vanity installation, mirrors, accessories, ventilation coordination, and finishing. Kitchen work is not included in this service.',
+    tags: ['Bathroom-Only Scope', 'Waterproofing & Tiling', 'Sanitaryware & Fittings'],
+    specs: {
+      materials: [
+        'Client-selected anti-skid bathroom floor tiles and wall tiles',
+        'Waterproofing system and sealants selected for site conditions',
+        'Approved plumbing pipes, valves, traps, and fittings',
+        'Client-selected WC, basin, taps, shower fittings, mirror, and accessories',
+      ],
+      warranty: 'Product and workmanship terms as specified in the approved work order',
+      avgTimeline: 'Confirmed after bathroom inspection and scope approval',
+      processSummary:
+        'Inspect existing plumbing and surfaces, confirm itemized scope and BOQ, protect adjacent areas, remove specified tiles and fixtures, repair the substrate, complete plumbing and waterproofing with applicable testing, install tiles and sanitaryware, seal joints, and conduct final checks.',
+    },
+  },
+  {
+    id: 'masonry-plaster-brickwork',
+    badge: 'CIVIL WORKS',
+    title: 'Brickwork, Blockwork, Plastering & Masonry',
+    category: 'Civil & Masonry',
+    iconName: 'wrench',
+    image: './src/assets/images/civil_structural_repairs_1792912295291.jpg',
+    description:
+      'Brick and block walls, partition work, internal and external plastering, crack repairs, patch repairs, cement finishing, and general masonry work for residential and commercial properties.',
+    tags: ['Brick & Block Work', 'Plaster Repairs', 'Internal & External'],
+    specs: {
+      materials: [
+        'Cement, sand, blocks, and bricks suited to the approved specification',
+        'Bonding agents and repair mortars where required',
+        'Mesh and reinforcement accessories where specified',
+      ],
+      warranty: 'As specified in the approved work order',
+      avgTimeline: 'Confirmed after measurements and substrate inspection',
+      processSummary:
+        'Site measurement, surface preparation, masonry or repair execution, curing, line and level checks, and finishing.',
+    },
+  },
+  {
+    id: 'demolition-site-preparation',
+    badge: 'CONTROLLED EXECUTION',
+    title: 'Demolition, Dismantling & Site Preparation',
+    category: 'Civil & Site Preparation',
+    iconName: 'wrench',
+    image: './src/assets/images/civil_structural_repairs_1792912295291.jpg',
+    description:
+      'Planned removal of non-structural partitions, old flooring, wall tiles, fixtures, cabinets, and finishes, along with debris handling and preparation for new work.',
+    tags: ['Scope-Based Dismantling', 'Debris Coordination', 'Renovation Preparation'],
+    specs: {
+      materials: [
+        'Protective sheets and site safety materials',
+        'Approved repair and surface-preparation materials',
+        'Debris handling arrangements based on site rules',
+      ],
+      warranty: 'Not applicable to dismantling; subsequent work is covered as specified in the work order',
+      avgTimeline: 'Confirmed after site survey and access review',
+      processSummary:
+        'Site survey, identification of protected services and structural elements, work-area protection, controlled dismantling, debris coordination, and substrate inspection.',
+    },
+  },
+  {
+    id: 'doors-windows-glazing',
+    badge: 'OPENINGS & GLAZING',
+    title: 'Doors, Windows, Aluminium & Glass Work',
+    category: 'Doors, Windows & Glass',
+    iconName: 'grid',
+    image: './src/assets/images/balcony_fabrication_grills_1792912295972.jpg',
+    description:
+      'Door and window installation or replacement, aluminium frames, sliding systems, glass partitions, mirrors, shower enclosures, and hardware upgrades.',
+    tags: ['Aluminium Frames', 'Glass Partitions', 'Door Hardware'],
+    specs: {
+      materials: [
+        'Aluminium profiles and hardware selected for the opening',
+        'Suitable clear, frosted, laminated, or toughened glass as specified',
+        'Seals, gaskets, and fixing accessories',
+      ],
+      warranty: 'As specified by the product supplier and in the approved work order',
+      avgTimeline: 'Confirmed after measurements and material selection',
+      processSummary:
+        'Opening measurement, profile and glass selection, fabrication, installation, alignment, sealing, and operation checks.',
+    },
+  },
+  {
+    id: 'commercial-interiors',
+    badge: 'COMMERCIAL PROJECTS',
+    title: 'Office, Shop, Clinic & Commercial Fit-outs',
+    category: 'Commercial Interiors',
+    iconName: 'home',
+    image: './src/assets/images/commercial_office_fitout_1792912327332.jpg',
+    description:
+      'Interior and civil execution for offices, retail stores, clinics, showrooms, and other commercial spaces, including partitions, counters, ceilings, flooring, electrical, and finishing coordination.',
+    tags: ['Office Fit-outs', 'Retail & Showrooms', 'Phased Execution'],
+    specs: {
+      materials: [
+        'Commercial-grade flooring and wall finishes as specified',
+        'Partition, ceiling, and acoustic materials as required',
+        'Approved electrical, lighting, and furniture components',
+      ],
+      warranty: 'As specified in the approved commercial work order',
+      avgTimeline: 'Project-specific, based on site conditions and agreed schedule',
+      processSummary:
+        'Requirement and site review, BOQ, work sequencing, trade coordination, execution, safety checks, snag closure, and handover.',
+    },
+  },
+  {
+    id: 'facade-cladding',
+    badge: 'EXTERNAL FINISHES',
+    title: 'Facade, ACP Cladding & External Repairs',
+    category: 'Facade & Exterior Civil',
+    iconName: 'grid',
+    image: './src/assets/images/commercial_office_fitout_1792912327332.jpg',
+    description:
+      'External wall finishing, facade maintenance, ACP cladding, exterior crack repairs, sealant replacement, and coordination of weather-protection details for buildings and commercial premises.',
+    tags: ['External Finishes', 'ACP Cladding', 'Sealant & Crack Repairs'],
+    specs: {
+      materials: [
+        'ACP or exterior cladding materials as approved',
+        'Exterior-grade sealants and repair compounds',
+        'Specified fasteners and support components',
+      ],
+      warranty: 'As specified in the approved work order and product documentation',
+      avgTimeline: 'Confirmed after access, safety, and facade inspection',
+      processSummary:
+        'Facade inspection, access and safety planning, substrate preparation, approved repair or cladding work, sealing, and final checks.',
+    },
+  },
+  {
+    id: 'terrace-roofing-sheds',
+    badge: 'ROOF & TERRACE WORK',
+    title: 'Terrace Repairs, Roofing & Protective Sheds',
+    category: 'Roofing & Terrace',
+    iconName: 'layers',
+    image: './src/assets/images/waterproofing_leakage_audit_1792912271288.jpg',
+    description:
+      'Terrace surface repairs, protective sheds, polycarbonate roofing, rainwater run-off improvements, and coordination of waterproofing and weatherproofing work.',
+    tags: ['Terrace Repairs', 'Roofing & Sheds', 'Rainwater Management'],
+    specs: {
+      materials: [
+        'Roofing sheets and support sections as specified',
+        'Approved sealants, fasteners, and flashing components',
+        'Waterproofing system selected for the site conditions',
+      ],
+      warranty: 'As specified in the approved work order for each defined scope',
+      avgTimeline: 'Confirmed after terrace inspection and access planning',
+      processSummary:
+        'Roof and terrace survey, drainage and access review, repair planning, installation or treatment, and water-flow checks where applicable.',
+    },
+  },
+  {
+    id: 'repairs-maintenance',
+    badge: 'REPAIR & MAINTENANCE',
+    title: 'General Civil Repairs & Property Maintenance',
+    category: 'Repairs & Maintenance',
+    iconName: 'wrench',
+    image: './src/assets/images/civil_structural_repairs_1792912295291.jpg',
+    description:
+      'Small and medium repair jobs including wall cracks, damaged plaster, tile replacement, door adjustments, fixture replacements, seepage-related repairs, and routine property upkeep.',
+    tags: ['Small & Medium Jobs', 'Residential & Commercial', 'Inspection-Based Quotes'],
+    specs: {
+      materials: [
+        'Repair mortar, fillers, and surface-finishing materials as needed',
+        'Replacement tiles, fittings, and hardware as approved',
+        'Site-specific repair products',
+      ],
+      warranty: 'As specified in the approved work order',
+      avgTimeline: 'Scheduled according to job size and material availability',
+      processSummary:
+        'Issue assessment, scope confirmation, quotation, repair execution, cleanup, and client inspection.',
+    },
+  },
+  {
+    id: 'mep-coordination',
+    badge: 'BUILDING SERVICES',
+    title: 'MEP Coordination & Fixture Installation',
+    category: 'MEP Services',
+    iconName: 'layers',
+    image: './src/assets/images/gypsum_ceiling_installation_1792912271007.jpg',
+    description:
+      'Coordination of mechanical, electrical, and plumbing requirements with civil and interior work, including exhaust fans, basic ventilation provisions, fixture locations, and service access planning.',
+    tags: ['Trade Coordination', 'Service Access', 'Interior Integration'],
+    specs: {
+      materials: [
+        'Approved electrical and plumbing fittings',
+        'Fixture supports and access-panel materials',
+        'Mechanical accessories as listed in the approved BOQ',
+      ],
+      warranty: 'As specified in the approved work order and product warranties',
+      avgTimeline: 'Aligned with the overall project schedule',
+      processSummary:
+        'Review of service requirements, coordination drawings or point layouts, installation sequencing, testing, and handover records.',
     },
   },
 ];
@@ -486,6 +888,39 @@ export const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
+export const SERVICE_AREAS = [
+  {
+    id: 'navi-mumbai',
+    name: 'Navi Mumbai',
+    description: 'Kharghar, Panvel, Kamothe, Kalamboli, Taloja, Belapur, Nerul, Seawoods, Vashi, Sanpada, Ulwe, and nearby areas.',
+  },
+  {
+    id: 'mumbai',
+    name: 'Mumbai',
+    description: 'Mumbai city and suburban residential and commercial project locations, subject to site assessment.',
+  },
+  {
+    id: 'thane',
+    name: 'Thane',
+    description: 'Thane and nearby residential and commercial project locations, subject to site assessment.',
+  },
+  {
+    id: 'raigad',
+    name: 'Raigad',
+    description: 'Raigad district locations, with availability confirmed after travel and site requirements are reviewed.',
+  },
+  {
+    id: 'pune',
+    name: 'Pune',
+    description: 'Pune and nearby residential and commercial project locations, subject to site assessment.',
+  },
+  {
+    id: 'palghar',
+    name: 'Palghar',
+    description: 'Palghar district locations, with availability confirmed after travel and site requirements are reviewed.',
+  },
+] as const;
+
 export const NEIGHBORHOODS: Neighborhood[] = [
   {
     id: 'kharghar',
@@ -551,6 +986,48 @@ export const NEIGHBORHOODS: Neighborhood[] = [
     activeProjects: 3,
     sectorsCovered: 'Sectors 16, 17, 18, 19, 21, Bamandongri station vicinity',
   },
+  {
+    id: 'navi-mumbai-region',
+    name: 'Navi Mumbai Region',
+    dispatchTime: 'Site visit by appointment',
+    activeProjects: 0,
+    sectorsCovered: 'Navi Mumbai including Kharghar, Kamothe, Kalamboli, Roadpali, CBD Belapur, Panvel, New Panvel, Taloja, Nerul, Seawoods, Vashi, Sanpada, Ulwe, and nearby nodes; visit timing confirmed after site assessment.',
+  },
+  {
+    id: 'mumbai-region',
+    name: 'Mumbai & Suburbs',
+    dispatchTime: 'Site visit by appointment',
+    activeProjects: 0,
+    sectorsCovered: 'Mumbai city and suburban residential and commercial locations; schedule confirmed after site assessment.',
+  },
+  {
+    id: 'thane-region',
+    name: 'Thane Region',
+    dispatchTime: 'Site visit by appointment',
+    activeProjects: 0,
+    sectorsCovered: 'Thane and nearby residential and commercial locations; schedule confirmed after site assessment.',
+  },
+  {
+    id: 'raigad-region',
+    name: 'Raigad District',
+    dispatchTime: 'Site visit by appointment',
+    activeProjects: 0,
+    sectorsCovered: 'Raigad district locations, including Panvel-side and other towns, subject to travel and site requirements.',
+  },
+  {
+    id: 'pune-region',
+    name: 'Pune Region',
+    dispatchTime: 'Site visit by appointment',
+    activeProjects: 0,
+    sectorsCovered: 'Pune and nearby residential and commercial locations; schedule confirmed after site assessment.',
+  },
+  {
+    id: 'palghar-region',
+    name: 'Palghar District',
+    dispatchTime: 'Site visit by appointment',
+    activeProjects: 0,
+    sectorsCovered: 'Palghar district locations; schedule confirmed after travel and site requirements are reviewed.',
+  },
 ];
 
 export const FAQS = [
@@ -575,9 +1052,9 @@ export const FAQS = [
       'All structural and interior materials—including Century Marine 710 ply, Saint-Gobain Gyproc boards, Asian Paints Royale buckets, and Hafele hardware—are delivered directly in factory-sealed packing with verifiable manufacturer batch barcodes. Homeowners receive copies of tax invoices and batch certifications prior to installation.',
   },
   {
-    question: 'Can you work while society regulations are in place in Navi Mumbai?',
+    question: 'Which areas do you serve for interior and civil work?',
     answer:
-      'Yes. Over 30 years in Navi Mumbai, we strictly adhere to CIDCO and cooperative housing society bye-laws: noisy work is restricted strictly to permitted hours (typically 10:00 AM – 1:00 PM and 3:00 PM – 6:00 PM), elevators are cushioned with protective correx sheets, and all debris is transported down through closed chutes or designated service hoists daily.',
+      'Teghia Enterprise covers Navi Mumbai, Mumbai, Thane, Raigad, Pune, and Palghar for interior and civil work. Exact site-visit availability, travel, project scope, and scheduling are confirmed after an initial discussion and site assessment. For housing societies and commercial premises, execution is coordinated with the applicable access, safety, and work-hour rules.',
   },
 ];
 

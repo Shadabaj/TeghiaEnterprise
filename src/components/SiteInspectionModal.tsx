@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Calendar, CheckCircle2, Clock, MapPin, Building, Phone, User, ShieldCheck, MessageSquare } from 'lucide-react';
-import { NEIGHBORHOODS, CONTRACTOR_INFO } from '../data/contractorData';
+import { NEIGHBORHOODS, CONTRACTOR_INFO, SERVICE_SCOPE_OPTIONS } from '../data/contractorData';
 
 interface SiteInspectionModalProps {
   isOpen: boolean;
@@ -257,12 +257,11 @@ export const SiteInspectionModal: React.FC<SiteInspectionModalProps> = ({
                     onChange={(e) => setScope(e.target.value)}
                     className="w-full bg-white border border-[#cbd5e1] rounded-[2px] p-2 text-xs text-[#1e2228] focus:border-[#1e2228] outline-none cursor-pointer"
                   >
-                    <option value="Full Turnkey Renovation">Full Turnkey Renovation</option>
-                    <option value="Waterproofing & Leakage Audit">Waterproofing &amp; Leakage Audit</option>
-                    <option value="Civil Repairs & Flooring">Civil Repairs &amp; Flooring</option>
-                    <option value="False Ceiling & Painting">False Ceiling &amp; Painting</option>
-                    <option value="Modular Kitchen & Wardrobes">Modular Kitchen &amp; Wardrobes</option>
-                    <option value="Balcony Grills & Fabrication">Balcony Grills &amp; Fabrication</option>
+                    {SERVICE_SCOPE_OPTIONS.map((service) => (
+                      <option key={service} value={service}>
+                        {service}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
