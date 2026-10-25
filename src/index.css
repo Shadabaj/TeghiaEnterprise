@@ -47,3 +47,30 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #75777b;
 }
+
+/* Teghia Enterprise brand monogram */
+.brand-monogram {
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: -0.1em;
+  line-height: 1;
+
+  background: linear-gradient(
+    135deg,
+    #f8e6a8 0%,
+    #d9b66b 25%,
+    #b88636 55%,
+    #f0d58b 75%,
+    #a7792f 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25));
+}
+
+
