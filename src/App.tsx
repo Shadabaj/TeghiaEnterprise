@@ -144,7 +144,7 @@ export default function App() {
               </p>
             </div>
             <div className="text-stone-300 font-mono text-xs">
-              {CONTRACTOR_INFO.phone} · teghiaenterprise65@gmail.com
+              {CONTRACTOR_INFO.phone} · teghiaenterprise.solutions@gmail.com
             </div>
           </div>
 
