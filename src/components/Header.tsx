@@ -82,7 +82,7 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
           <div className="flex items-center gap-1 shrink-0 font-semibold text-[#1e2228] tracking-wider text-[10px]">
             <Award className="w-3 h-3 text-[#b86b35]" />
-            <span>30+ YRS CRAFT</span>
+            <span>45+ YRS CRAFT</span>
           </div>
         </div>
       </div>

@@ -127,7 +127,7 @@ export const SiteInspectionModal: React.FC<SiteInspectionModalProps> = ({
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-[#75777b]">Assigned Inspector:</span>
-                  <span className="font-semibold text-[#914c18]">Er. Shadab / Lead Civil Engineer</span>
+                  <span className="font-semibold text-[#914c18]"> Er Junaid Ansari / Engineer | MBA in Construction Management</span>
                 </div>
               </div>
 
